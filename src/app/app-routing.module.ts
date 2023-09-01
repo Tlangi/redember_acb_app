@@ -5,9 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent, SageApiFormComponent, SageFieldMappingFormComponent, ThirdpartyEndpointFormComponent } from './admin';
 import { LoginComponent, NewUserComponent } from './auth';
 import { HomeAcbPaymentsComponent } from './acb_payments';
+import { AuthGuard } from './_helpers';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/new_user', component: NewUserComponent },
   { path: 'admin', component: AdminHomeComponent },

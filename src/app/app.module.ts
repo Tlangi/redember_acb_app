@@ -12,7 +12,7 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NewUserComponent } from './auth/new-user/new-user.component';
 import { HomeAcbPaymentsComponent } from './acb_payments/home-acb-payments/home-acb-payments.component';
-import { FakeBackendInterceptor } from './_helpers';
+import { ErrorInterceptor, FakeBackendInterceptor, JwtInerceptor } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -35,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [FakeBackendInterceptor],
+  providers: [FakeBackendInterceptor, ErrorInterceptor, JwtInerceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

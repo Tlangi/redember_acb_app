@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '@app/_models';
 import { ServiceService } from '@app/auth';
 
 
@@ -11,7 +12,7 @@ import { ServiceService } from '@app/auth';
 })
 export class HomeComponent {
 
-  user? Users | null;
+  user: User | null | undefined;
 
 
   constructor(

@@ -11,7 +11,7 @@ import { first } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm?: FormGroup;
+  loginForm!: FormGroup;
   loading = false;
   submitted = false;
   error?: string;
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authService.login(this.f.username.value, 
+    this.authService.login(this.f?.username.value, 
       this.f?.password.value, this.f?.company.value,
        this.f?.role.value)
       .pipe(first())

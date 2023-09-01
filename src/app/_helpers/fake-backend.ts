@@ -4,8 +4,8 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, materialize, dematerialize } from 'rxjs/operators';
 
 
-let users = [{ id: 1, firstName: 'Tlangelani', lastName: 'Maswanganye', username: 'Admin', password: 'admin', role: 'Admin', company: 'RedEmber', token: 'fake-jwt-token' }, 
-    { id: 2, firstName: 'Mathapelo', lastName: 'Seokotsa', username: 'Mathapelo', password: 'password', role: 'Payroll', company: 'Xalati M', token: 'fake-jwt-token' }];
+let users = [{ id: 1, firstName: 'Tlangelani', lastName: 'Maswanganye', username: 'Admin', password: 'admin', role: 'Admin', company: 'RedEmber', token: 'fake-jwt-token' }]//, 
+    //{ id: 2, firstName: 'Mathapelo', lastName: 'Seokotsa', username: 'Mathapelo', password: 'password', role: 'Payroll', company: 'Xalati M', token: 'fake-jwt-token' }];
 
 let companies = [{ id: 1, name: 'RedEmber', address: 'Pretoria', contact: '0123456789', email: 'maswanganyetlangelani@gmail.com' }, 
     { id: 2, name: 'Xalati M', address: 'Johannesburg', contact: '0123456789', email: 'larrymaswanganye@gmail.com' }];
